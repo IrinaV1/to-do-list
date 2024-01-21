@@ -7,8 +7,8 @@
 .wrapper {
 display: flex;
 flex-direction: column;
-justify-content: space-around;
-align-items: center;
+justify-content: flex-start;
+
 margin: 20px auto;
 padding: 10px;
   width: 280px;
@@ -24,7 +24,8 @@ h1{
 }
 .header{
   display: flex;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: flex-start;
   width: 100%;
   margin: 5px auto;
   padding: 10px;
@@ -49,13 +50,14 @@ border: none;
 .list-items{
   border: 1px solid #ffff;
   width: 100%;
- 
-
+  display: flex;
+  justify-content: space-between;
 }
 
-ul{
-  list-style: none;
+.string{
+  text-decoration: line-through;
 }
+
 
 .list-item{
   display: flex;
@@ -65,4 +67,5 @@ ul{
   border: 1px solid #ffff;
   border-radius: 5px;
   background-color: rgb(140, 217, 236);
+  width: 70%;
 }

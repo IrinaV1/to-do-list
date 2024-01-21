@@ -1,14 +1,14 @@
 import '../App.css';
 
-function ToDo () {
+function ToDo ({todo, toggleTask, removeTask}) {
 return (
    
-         <div className='list-items'>
-    <ul>
-      <li className='list-item'>A <button type='submit'>Delate</button></li>
-      <li className='list-item'>B <button type='submit'>Delate</button></li>
-      <li className='list-item'>C <button type='submit'>Delate</button></li>
-    </ul>
+         <div key={todo.id} className='list-items'>
+
+      <div onClick={() => toggleTask(todo.id)} className={todo.complete ? 'list-item string' : 'list-item'}>{todo.task}</div>
+      <button onClick={() => removeTask(todo.id) } type='submit'>Delate</button>
+     
+ 
     </div>
 
 )
